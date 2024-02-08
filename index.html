@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<script src="./scripts.js"></script>
+<body>
+  <form class="main-container">
+    <div id="top-wrap">
+      <p id="top-display"></p>
+    </div>
+    
+    <button type="button" class="num" id="zero" name="0" onclick="numPress(this.name)">0</button>
+    <button type="button" class="num" id="one" name="1" onclick="numPress(this.name)">1</button>
+    <button type="button" class="num" id="two" name="2" onclick="numPress(this.name)">2</button>
+    <button type="button" class="num" id="three" name="3" onclick="numPress(this.name)">3</button>
+    <button type="button" class="num" id="four" name="4" onclick="numPress(this.name)">4</button>
+    <button type="button" class="num" id="five" name="5" onclick="numPress(this.name)">5</button>
+    <button type="button" class="num" id="six" name="6" onclick="numPress(this.name)">6</button>
+    <button type="button" class="num" id="seven" name="7" onclick="numPress(this.name)">7</button>
+    <button type="button" class="num" id="eight" name="8" onclick="numPress(this.name)">8</button>
+    <button type="button" class="num" id="nine" name="9" onclick="numPress(this.name)">9</button>
+    <button type="button" class="operation" id="add" name="+" onclick="operationPress(this.name)">+</button>
+    <button type="button" class="operation" id="subtract" name="-" onclick="operationPress(this.name)">-</button>
+    <button type="button" class="operation" id="multiply" name="*" onclick="operationPress(this.name)">&times;</button>
+    <button type="button" class="operation" id="divide" name="/" onclick="operationPress(this.name)">&divide;</button>
+    <button type="button" class="operation" id="modulus" name="%" onclick="operationPress(this.name)">%</button>
+    <button type="button" class="thingy" id="clear" onclick="clearPress()">C</button>
+    <button type="button" class="thingy" id="equals" onclick="equalsPress()">=</button>
+    <button type="button" class="thingy" id="period" onclick="periodPress()">.</button>
+    <button type="button" class="thingy" id="backspace" onclick="backPress()">&lt;</button>
+
+
+    <!-- <p id="filler">Wow! A calulator!</p> -->
+
+
+  </form>
+</body>
+</html>
