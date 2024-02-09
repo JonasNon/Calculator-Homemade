@@ -1,6 +1,6 @@
 
 // let displayText = document.getElementById("top-display");
-// let opPress = false
+let opPress = false
 // let once = false
 
 
@@ -23,32 +23,25 @@ const updateDisplay = () => {
   document.getElementById('top-display').innerText = testAnswer
 }
 
-
-
 const backPress = () => {
   testAnswer = testAnswer.slice(0, -1);
   updateDisplay()
 }
-
 
 const periodPress = () => {
   testAnswer += "."
   updateDisplay()
 }
 
-
 const clearPress = () => {
   testAnswer = ""
   updateDisplay()
 }
 
-
-
-
 const numPress = (num) => {
   testAnswer += num
   updateDisplay()
-
+  opPress = false
   // num = "" + num
   // currentNum += num
   // console.log(currentNum)
@@ -70,8 +63,15 @@ const numPress = (num) => {
 
 
 const operationPress = (operation) => {
-  testAnswer += operation
+  if (opPress == false) {
+    testAnswer += operation
+    opPress = true
+  } else {
+    testAnswer = testAnswer.slice(0, -1) + operation
+
+  }
   updateDisplay()
+
 
   // opPress = true
   // operatorList.push(operation)
@@ -85,6 +85,7 @@ const equalsPress = () => {
   // let oldEquation = document.createElement('p')
   // oldEquation.innerHTML = testAnswer
   // document.getElementById('top-display').appendChild(oldEquation)
+  console.log(testAnswer)
   document.getElementById('top-display').innerText = eval(testAnswer)
   testAnswer = eval(testAnswer)
 }
@@ -149,7 +150,7 @@ const equalsPress = () => {
 
 
   // let operationListInitial = operatorList
-  // for (let i = 0; i < 1; i++) {
+  // for (let i = 0; i < operationListInitial; i++) {
   //   let numOne = Number(numList[i])
   //   let numTwo = Number(numList[i+1])
   //   let op = operatorList[i]
